@@ -7,10 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
+    "start": "node server.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.18.1",
+    "express": "^5.2.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1"
