@@ -1,25 +1,132 @@
-# React + Vite
+# AI Image Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web application for generating and browsing AI-created images, built with **React + Vite** on the frontend and a lightweight **Node.js** server.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse and view AI-generated images in a responsive gallery
+- Component-based React architecture for easy extension
+- Styled with **Tailwind CSS** and **PostCSS**
+- Fast dev/build tooling powered by **Vite**
+- Simple Node.js server (`server.js`) for backend/API needs
+- Linting via **oxlint**
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer      | Technology            |
+|------------|------------------------|
+| Frontend   | React (JSX)            |
+| Bundler    | Vite                   |
+| Styling    | Tailwind CSS, PostCSS  |
+| Linting    | oxlint                 |
+| Backend    | Node.js (`server.js`)  |
+| Package Mgr| npm                    |
 
-## Expanding the Oxlint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+frontend/
+├── dist/                   # Production build output
+├── node_modules/           # Installed dependencies
+├── public/                 # Static public assets
+├── src/
+│   ├── assets/             # Images, icons, and other static assets
+│   ├── Components/         # Reusable React components
+│   ├── Pages/
+│   │   └── Home.jsx        # Home page component
+│   ├── App.css             # Global app styles
+│   ├── App.jsx             # Root application component
+│   ├── index.css           # Base/global CSS (Tailwind entry)
+│   └── main.jsx             # React app entry point
+├── .env                     # Environment variables (not committed)
+├── .gitignore                # Git ignore rules
+├── .oxlintrc.json            # oxlint configuration
+├── index.html                 # HTML entry point for Vite
+├── package.json               # Project metadata & dependencies
+├── package-lock.json           # Locked dependency versions
+├── postcss.config.js            # PostCSS configuration
+├── server.js                     # Node.js backend server
+├── tailwind.config.js             # Tailwind CSS configuration
+├── vite.config.js                  # Vite configuration
+└── README.md                        # Project documentation
+```
 
+## 🚀 Getting Started
 
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
 
-tJY5cUjGs4mvq24BHkvmA64WHj5swvLYaqDg90WA1so
+### Installation
 
-https://api.unsplash.com/search/photos?page=1&query=office
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd frontend
 
+# Install dependencies
+npm install
+```
 
-https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
+### Environment Variables
+
+Create a `.env` file in the root directory and add any required keys, e.g.:
+
+```
+VITE_API_KEY=your_api_key_here
+VITE_API_BASE_URL=http://localhost:5000
+```
+
+### Development
+
+Run the Vite dev server:
+
+```bash
+npm run dev
+```
+
+If the project uses `server.js` as a backend, start it separately:
+
+```bash
+node server.js
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The output will be generated in the `dist/` folder.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+### Linting
+
+```bash
+npx oxlint
+```
+
+## 📂 Key Files
+
+- **`src/main.jsx`** – Bootstraps the React app and mounts it to the DOM.
+- **`src/App.jsx`** – Root component that sets up routing/layout.
+- **`src/Pages/Home.jsx`** – Main gallery/home page displaying AI-generated images.
+- **`src/Components/`** – Shared UI components (cards, headers, modals, etc.).
+- **`tailwind.config.js`** – Tailwind theme and content path configuration.
+- **`server.js`** – Backend entry point (API routes / image generation logic).
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes
+4. Push to the branch and open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License — feel free to use and modify it.
